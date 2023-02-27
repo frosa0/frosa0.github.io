@@ -1,3 +1,4 @@
+//========= toogle responsive ====================
 const navToogle = document.getElementById("nav_toggle");
 const navList = document.querySelector(".nav__list");
 const navLi = document.querySelectorAll(".nav__li");
@@ -12,14 +13,13 @@ for (let i = 0; i < navLi.length; i++) {
     });
 }
 
-
+//========= form ====================
 const contactForm = document.querySelector(".contact_form");
 const mailTo = document.querySelector("#mail_to");
 
 contactForm.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event){
-    // event.preventDefault(); //evito que se recargue la pagina
     const form = new FormData(this);
     const tempHref = document.getElementById("mail_to").getAttribute("href");
     console.log(tempHref);
