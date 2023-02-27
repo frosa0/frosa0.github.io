@@ -23,7 +23,6 @@ function handleSubmit(event){
     const form = new FormData(this);
     const tempHref = document.getElementById("mail_to").getAttribute("href");
     console.log(tempHref);
-    mailTo.setAttribute('href', `${tempHref}?subject=${form.get("name")} ${form.get("email")}&body=${form.get("message")}`)
+    mailTo.setAttribute('href', `${tempHref}?subject=Name: ${form.get("name")} | Subject: ${form.get("subject")}&body=${form.get("message")}`)
     mailTo.click();
 }
-    
